@@ -2,66 +2,138 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
     height: 100vh;
     display: flex;
-    font-family: Arial, sans-serif;
-}
+    justify-content: center;  /* horizontal */
+    align-items: center;      /* vertical */
 
-/* Lado izquierdo */
-.Image {
-    width: 50%;
-    background-image: url('https://via.placeholder.com/800');
+    background: url('../../assets/fondoLogin.webp') no-repeat center center;
     background-size: cover;
-    background-position: center;
 }
 
-/* Lado derecho */
-.MainContainer {
-    width: 50%;
+/* Contenedor */
+.container {
+    width: 100%;
     display: flex;
-    flex-direction: column; /* IMPORTANTE */
     justify-content: center;
-    align-items: center;
+}
+
+/* Card */
+.login-box {
+    background: rgba(255, 255, 255, 0.628); /* transparencia */
+    backdrop-filter: blur(8px); /* desenfoque del fondo */
+    -webkit-backdrop-filter: blur(8px); /* soporte Safari */
+
+    padding: 40px;
+    width: 350px;
+    border-radius: 12px;
+    text-align: center;
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
 /* Título */
-h1 {
-    margin-bottom: 20px;
-    font-size: 40px;
-}
-
-/* Formulario */
-form {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-}
-
-/* Labels */
-label {
-    margin-bottom: 5px;
-    text-align: left;
+.login-box h2 {
+    margin-bottom: 25px;
 }
 
 /* Inputs */
-input {
-    padding: 10px;
-    margin-bottom: 15px;
+.input-box {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-box i {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: gray;
+}
+
+.input-box input {
     width: 100%;
+    padding: 10px 10px 10px 35px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+}
+
+/* Forgot */
+.forgot {
+    text-align: right;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.forgot a {
+    text-decoration: none;
+    color: gray;
 }
 
 /* Botón */
-button {
+.btn {
+    width: 100%;
     padding: 12px;
-    background-color: #1e73d8;
-    color: white;
     border: none;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+
+    background: linear-gradient(90deg, #5f9cff, #d946ef);
+    background-size: 200%;
+
+    transition: all 0.4s ease;
+}
+
+.btn:hover {
+    background-position: right;
+    transform: scale(1.05);
+}
+
+
+
+/* Texto */
+.or {
+    margin: 20px 0 10px;
+    font-size: 14px;
+    color: gray;
+}
+
+/* Redes */
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.social i {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #155bb5;
+/* Signup */
+.signup {
+    font-size: 14px;
+    color: gray;
+}
+
+.signup-link {
+    display: block;
+    margin-top: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
 }
